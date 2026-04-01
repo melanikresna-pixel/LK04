@@ -1,0 +1,111 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ROOT / VARIABLE ===== */
+:root {
+    --primary: #4f46e5;
+    --secondary: #d046c0;
+    --text: #333;
+    --radius: 12px;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--secondary);
+    color: var(--text);
+    padding: 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ===== HEADER (FLEXBOX) ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== TITLE ===== */
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ===== GRID FORM ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* FULL WIDTH */
+.full {
+    grid-column: span 2;
+}
+
+/* ===== INPUT ===== */
+input, select, textarea {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* ===== BUTTON ===== */
+button {
+    background: var(--primary);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+/* ===== BREAKPOINT TABLET ===== */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: span 1;
+    }
+}
+
+/* ===== BREAKPOINT MOBILE ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}

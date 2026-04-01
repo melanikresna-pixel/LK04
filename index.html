@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Modern</title>
+
+    <!-- Hubungkan ke CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER FLEXBOX -->
+    <div class="header">
+        <h2>Form Pendaftaran</h2>
+        <span>Web Dasar</span>
+    </div>
+
+    <!-- CARD -->
+    <div class="card">
+        <h1>Daftar Sekarang</h1>
+
+        <!-- FORM -->
+        <form class="form-grid">
+            
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+
+            <input type="tel" placeholder="No HP" required>
+            
+            <select required>
+                <option value="">Pilih Kategori</option>
+                <option>Mahasiswa</option>
+                <option>Pelajar</option>
+                <option>Umum</option>
+            </select>
+
+            <textarea class="full" placeholder="Pesan" rows="4" required></textarea>
+
+            <button class="full" type="submit">Kirim</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
