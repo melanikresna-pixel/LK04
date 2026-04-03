@@ -1,111 +1,120 @@
-/* ===== RESET ===== */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== ROOT / VARIABLE ===== */
-:root {
-    --primary: #4f46e5;
-    --secondary: #d046c0;
-    --text: #333;
-    --radius: 12px;
+body {
+    font-family: 'Quicksand', Arial, sans-serif; 
+    background-color: aliceblue;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* ===== BODY ===== */
-body {
-    font-family: Arial, sans-serif;
-    background: var(--secondary);
-    color: var(--text);
+/* CONTAINER UTAMA */
+.main-container {
+    max-width: 1000px;
+    margin: auto;
     padding: 20px;
 }
 
-/* ===== CONTAINER ===== */
-.container {
-    max-width: 1000px;
-    margin: auto;
+/* NAVBAR (Tetap di kanan atas) */
+.navbar {
+    background: #007bff;
+    color: white;
 }
 
-/* ===== HEADER (FLEXBOX) ===== */
-.header {
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-/* ===== CARD ===== */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: var(--radius);
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ===== TITLE ===== */
-h1 {
-    margin-bottom: 15px;
-    text-align: center;
+.hero-role {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
 }
 
-/* ===== GRID FORM ===== */
-.form-grid {
+/* LAYOUT VERTIKAL (Judul di Atas Konten) */
+section {
+    margin-bottom: 40px; /* Jarak antar section */
+}
+
+.section-title {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Jarak antara judul dan card di bawahnya */
+}
+
+/* CARD STYLE */
+article {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+article ul {
+    list-style-position: inside;
+    color: #666;
+}
+
+.contact-card p {
+    margin-bottom: 8px;
+}
+
+/* SKILL & PROJECT GRID (Tetap 3 kolom menyamping) */
+.skill-container, .project-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-/* FULL WIDTH */
-.full {
-    grid-column: span 2;
-}
-
-/* ===== INPUT ===== */
-input, select, textarea {
-    padding: 10px;
-    border-radius: var(--radius);
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-/* ===== BUTTON ===== */
-button {
-    background: var(--primary);
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #3730a3;
-}
-
-/* ===== BREAKPOINT TABLET ===== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .form-grid {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill-container, .project-container {
         grid-template-columns: 1fr;
-    }
-
-    .full {
-        grid-column: span 1;
-    }
-}
-
-/* ===== BREAKPOINT MOBILE ===== */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .card {
-        padding: 15px;
     }
 }
