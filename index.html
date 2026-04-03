@@ -3,49 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Modern</title>
-
-    <!-- Hubungkan ke CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio - Melany Kresna Putri</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<div class="container">
+    <header class="navbar">
+        <div class="nav-container">
+            <h1 class="brand">Melany Kresna Putri</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- HEADER FLEXBOX -->
-    <div class="header">
-        <h2>Form Pendaftaran</h2>
-        <span>Web Dasar</span>
-    </div>
+    <main class="main-container">
+        
+        <section class="hero">
+            <img src="WIN_20260127_08_53_50_Pro.jpg" alt="Foto Profil">
+            <p class="hero-role">UI/UX Designer & Frontend Developer</p>
+        </section>
 
-    <!-- CARD -->
-    <div class="card">
-        <h1>Daftar Sekarang</h1>
+        <section id="tentang">
+            <h2 class="section-title">Tentang Saya</h2>
+            <article>
+                <p>Saya adalah mahasiswa yang fokus pada UI/UX Design dan Frontend Development...</p>
+            </article>
+        </section>
 
-        <!-- FORM -->
-        <form class="form-grid">
-            
-            <input type="text" placeholder="Nama Lengkap" required>
-            <input type="email" placeholder="Email" required>
+        <section id="skill">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skill-container">
+                <article>
+                    <h3>UI/UX</h3>
+                    <ul><li>Wireframing</li><li>Prototyping</li></ul>
+                </article>
+                <article>
+                    <h3>Frontend Developer</h3>
+                    <ul><li>HTML/CSS</li><li>Responsive</li></ul>
+                </article>
+                <article>
+                    <h3>Tools</h3>
+                    <ul><li>Figma</li><li>VS Code</li></ul>
+                </article>
+            </div>
+        </section>
 
-            <input type="tel" placeholder="No HP" required>
-            
-            <select required>
-                <option value="">Pilih Kategori</option>
-                <option>Mahasiswa</option>
-                <option>Pelajar</option>
-                <option>Umum</option>
-            </select>
+        <section id="proyek">
+            <h2 class="section-title">Proyek</h2>
+            <div class="project-container">
+                <article>
+                    <h3>Proyek A</h3>
+                    <p>Deskripsi singkat proyek.</p>
+                </article>
+                <article>
+                    <h3>Proyek B</h3>
+                    <p>Deskripsi singkat proyek.</p>
+                </article>
+                <article>
+                    <h3>Proyek C</h3>
+                    <p>Deskripsi singkat proyek.</p>
+                </article>
+            </div>
+        </section>
 
-            <textarea class="full" placeholder="Pesan" rows="4" required></textarea>
+        <section id="kontak">
+            <h2 class="section-title">Kontak</h2>
+            <article class="contact-card">
+                <p><strong>Email:</strong> melanikresna@gmail.com</p>
+                <p><strong>No HP:</strong> +62 857-8400-7645</p>
+            </article>
+        </section>
 
-            <button class="full" type="submit">Kirim</button>
-
-        </form>
-    </div>
-
-</div>
+    </main>
 
 </body>
 </html>
